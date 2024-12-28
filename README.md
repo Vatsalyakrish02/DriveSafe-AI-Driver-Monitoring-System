@@ -78,8 +78,11 @@ drowsiness-detection-system/
 ├── templates/                 # HTML templates for Flask  
 │   └── index.html             # Web interface  
 ├── drowsiness_detection.ipynb # Jupyter notebook file
+
 ├── image_labels.csv           # CSV file for image labels
+
 ├── License                    # License for the github repository  
+
 └── README.md                  # Project documentation  
 
 ## Model Details
