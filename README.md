@@ -67,7 +67,9 @@ drowsiness-detection-system/
 │  
 ├── app.py                     # Flask application script  
 ├── PreparedData               # Directory containing images for training and testing
+
 ├── customtesting              # Directory containing images for testing
+
 ├── logs                       # Directory contains tensorboard log details
 ├── requirements.txt           # Required Python libraries  
 ├── model/                     # Directory for the trained model  
