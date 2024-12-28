@@ -71,6 +71,7 @@ drowsiness-detection-system/
 ├── customtesting              # Directory containing images for testing
 
 ├── logs                       # Directory contains tensorboard log details
+
 ├── requirements.txt           # Required Python libraries
 
 ├── model/                     # Directory for the trained model  
