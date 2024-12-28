@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsiness Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border: 5px solid #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+    <script>
+        function toggleFullscreen() {
+            const videoElement = document.querySelector('img');
+            if (!document.fullscreenElement) {
+                videoElement.requestFullscreen().catch(err => {
+                    alert(`Error attempting to enable full-screen mode: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Drowsiness Detection Live Monitoring</h1>
+    </header>
+    <main>
+        <img src="{{ url_for('video_feed') }}" alt="Live feed">
+        <button onclick="toggleFullscreen()">Toggle Fullscreen</button>
+    </main>
+    <div class="footer">
+        <p>Ensure safe driving with AI-powered drowsiness detection.</p>
+    </div>
+</body>
+</html>
