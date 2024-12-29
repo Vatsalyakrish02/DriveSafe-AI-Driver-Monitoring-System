@@ -2,14 +2,14 @@
 
 A real-time drowsiness detection system utilizing deep learning and computer vision to enhance road safety. The system identifies whether a driver's eyes are open or closed and triggers an alert if drowsiness is detected.
 
-## Features
+## 🚀 Features
 
 Real-time monitoring using a webcam.
 AI-driven eye state classification (Open/Closed) based on a fine-tuned MobileNetV2 model.
 Audio alert system to warn drivers in case of detected drowsiness.
 Flask web application for seamless integration and user interface.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 * Python: Backend logic and integration.
 * TensorFlow: Deep learning framework for model training and inference.
@@ -18,7 +18,7 @@ Flask web application for seamless integration and user interface.
 * Pygame: Audio playback for the alert system.
 * TensorFlow Hub: Pre-trained model for transfer learning.
 
-## Installation
+## ⚙️ Installation
 
 **Prerequisites**
 
@@ -30,14 +30,18 @@ Steps
 1. Clone the repository:
 
 bash
+
 Copy code
+
 git clone https://github.com/yourusername/drowsiness-detection-system.git  
 cd drowsiness-detection-system  
 
 2. Install dependencies:
 
 bash
+
 Copy code
+
 pip install -r requirements.txt  
 
 3. Place your trained model in the /model directory (update the file path in app.py if needed).
@@ -49,20 +53,27 @@ pip install -r requirements.txt
 1. Run the Flask application:
 
 bash
+
 Copy code
-python app.py  
+
+python app.py
+
 Open a web browser and navigate to:
 
 2. Open a web browser and navigate to:
 
 Copy code
-http://127.0.0.1:5000/  
+
+http://127.0.0.1:5000/ 
+
 Allow access to your webcam, and the application will start monitoring your eyes.
 
-## Directory Structure
+## 📂 Directory Structure
 
 perl
+
 Copy code
+
 drowsiness-detection-system/  
 │  
 ├── app.py                     # Flask application script  
@@ -86,17 +97,17 @@ drowsiness-detection-system/
 
 └── README.md                  # Project documentation  
 
-## Model Details
+## 📊 Model Details
 
 * Architecture: MobileNetV2 fine-tuned for binary classification (Open/Closed).
 * Training Dataset: OpenNed Closed Eyes Dataset
 
-## Future Improvements
+## 🔧 Future Improvements
 
 * Enhancing model accuracy with diverse datasets.
 * Adding multi-feature detection like yawning or head tilts.
 * Optimizing for deployment on edge devices (e.g., Raspberry Pi).
 
-## Contributing
+## 🤝 Contributing
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
