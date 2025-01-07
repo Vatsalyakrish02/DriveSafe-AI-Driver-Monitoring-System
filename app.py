@@ -10,8 +10,7 @@ import time  # For cooldown mechanism
 app = Flask(__name__)
 
 # Model path
-MODEL_PATH = "C:/Users/vatsa/Downloads/Driver_drowsiness_detection/model/20241227-2054-full-image-set-mobilenetv2-Adam.h5"
-
+MODEL_PATH = "C:/Users/vatsa/Downloads/Driver_drowsiness_detection/DriveSafe-AI-Driver-Monitoring-System/model/20250103-2118-full-image-set-mobilenetv2-Adam.h5"
 # Load model with the custom KerasLayer
 model = load_model(MODEL_PATH, custom_objects={'KerasLayer': hub.KerasLayer})
 
@@ -20,14 +19,14 @@ labels = ['Closed', 'Open']
 
 # Initialize pygame mixer for sound
 mixer.init()
-beep_sound = mixer.Sound("C:/Users/vatsa/Downloads/Driver_drowsiness_detection/alarm.wav")  # Replace with the path to your beep sound file
+beep_sound = mixer.Sound("C:/Users/vatsa/Downloads/Driver_drowsiness_detection/DriveSafe-AI-Driver-Monitoring-System/alarm.wav")  # Replace with the path to your beep sound file
 
 # Load Haar cascade for face detection
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 # Cooldown variables for the beep sound
 last_alert_time = 0
-alert_cooldown = 2  # seconds
+alert_cooldown = 1  # seconds
 
 # Function to preprocess the image
 def preprocess_image(image):
